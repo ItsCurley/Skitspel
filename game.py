@@ -19,7 +19,7 @@ pygame.display.set_caption("ASCII Grid Roguelike")
 
 NUMROOMS = 80
 NUM_ENEMIES = 10
-PLAYER_MAX_HP = 99999
+PLAYER_MAX_HP = 50
 ENEMY_MAX_HP = 20
 
 player_hp = PLAYER_MAX_HP
