@@ -19,7 +19,7 @@ pygame.display.set_caption("ASCII Grid Roguelike")
 
 NUMROOMS = 80
 NUM_ENEMIES = 10
-PLAYER_MAX_HP = 50
+PLAYER_MAX_HP = 99999
 ENEMY_MAX_HP = 20
 
 player_hp = PLAYER_MAX_HP
@@ -368,16 +368,16 @@ while running:
 
             if player_hp > 0:
                 moved = False
-                if event.key in (pygame.K_UP, pygame.K_w):
+                if event.key in (pygame.K_UP, pygame.K_w, pygame.K_k):
                     try_move(-1, 0)
                     moved = True
-                if event.key in (pygame.K_DOWN, pygame.K_s):
+                if event.key in (pygame.K_DOWN, pygame.K_s, pygame.K_j):
                     try_move(1, 0)
                     moved = True
-                if event.key in (pygame.K_RIGHT, pygame.K_d):  
+                if event.key in (pygame.K_RIGHT, pygame.K_d, pygame.K_l):  
                     try_move(0, 1)
                     moved = True    
-                if event.key in (pygame.K_LEFT, pygame.K_a):
+                if event.key in (pygame.K_LEFT, pygame.K_a, pygame.K_h):
                     try_move(0, -1)
                     moved = True            
 
